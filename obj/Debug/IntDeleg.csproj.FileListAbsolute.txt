@@ -1,1 +1,6 @@
 H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\bin\Debug\IntDeleg.exe.config
+H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\bin\Debug\IntDeleg.exe
+H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\bin\Debug\IntDeleg.pdb
+H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\obj\Debug\IntDeleg.csprojResolveAssemblyReference.cache
+H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\obj\Debug\IntDeleg.exe
+H:\VS\number2(deleg,integral)\IntDeleg\IntDeleg\obj\Debug\IntDeleg.pdb
