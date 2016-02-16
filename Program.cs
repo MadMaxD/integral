@@ -14,13 +14,13 @@ namespace IntDeleg
             del d = fun.f;
             double s;
             int a = 0;
-            int b = 1;
-            int n = 1000;
+            int b = 13;
+            int n = 10;
             s = Integral(d, a, b, n,'p');
             Console.WriteLine("Интеграл x^2 (прямоугольника) на интервале {0} {1} I={2} ", a,b,s);
             s = Integral(d, a, b, n, 't');
             Console.WriteLine("Интеграл x^2 (трапеций) на интервале {0} {1} I={2} ", a, b, s);
-           // Console.WriteLine("Интеграл x^2 прямоугольники на интервале {0} {1} I={2} ", a, b, s);
+           
             Console.ReadKey();
         }
         public static double Integral(del f, double a, double b, int n, char c)
@@ -49,10 +49,6 @@ namespace IntDeleg
                     s += f(x);
                 }
                 s *= h;
-            }
-            else if (c == 's')
-            {
-
             }
             else
             {
