@@ -10,40 +10,38 @@ namespace IntDeleg
     {
         static void Main(string[] args)
         {
-            A a= new A('s');
-            Console.WriteLine(a.P(5));
-            Console.ReadKey();
+            Console.WriteLine("Передача имени метода в подпрограмму:\n");
+            del d = new del(C1.f);
+            double a = 0, b = 1, s;
+            int n = 100;
+            s = Integral(d, a, b, n);
+            Console.WriteLine("s={0}", s);
+            Console.Write("\nPress any key to continue . . . ");
+            Console.ReadKey(true);
+        }
+
+        public static double Integral(del f, double a, double b, int n)
+        {
+            double x, s = (f(a) + f(b)) / 2, h = (b - a) / n;
+            for (int i = 1; i < n; i++)
+            {
+                x = a + i * h;
+                s += f(x);
+            }
+            s *= h;
+            return s;
         }
 
     }
 
-    internal class A
+    public delegate double del(double x);
+    class C1
     {
-        public delegate int Power(int x);
-
-        public Power P;
-
-        private int square(int x)
+        public static double f(double x)
         {
-            return x*x;
+            return x * x;
         }
-
-        private int cube(int x)
-        {
-            return x*x*x;
-        }
-
-        public A(char f) 
-        {
-            if (f == 's')
-            {
-                P = new Power(square);
-            }
-            else if (f == 'c')
-            {
-                P = new Power(cube);
-            }
-       }
     }
+    
 
 }
